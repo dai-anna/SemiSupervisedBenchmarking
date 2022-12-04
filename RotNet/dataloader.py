@@ -213,7 +213,7 @@ class DataLoader(object):
 if __name__ == '__main__':
     from matplotlib import pyplot as plt
 
-    dataset = GenericDataset('cifar10','train', random_sized_crop=True)
+    dataset = GenericDataset('cifar10','train', random_sized_crop=False)
     dataloader = DataLoader(dataset, batch_size=8, unsupervised=True)
 
     for b in dataloader(0):
