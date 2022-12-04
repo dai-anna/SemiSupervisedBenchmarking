@@ -49,8 +49,8 @@ class GenericDataset(data.Dataset):
         self.num_imgs_per_cat = num_imgs_per_cat
 
         if self.dataset_name=='cifar10':
-            self.mean_pix = [x/255.0 for x in [125.3, 123.0, 113.9]]
-            self.std_pix = [x/255.0 for x in [63.0, 62.1, 66.7]]
+            self.mean_pix = [0.4914, 0.4822, 0.4465]
+            self.std_pix = [0.2023, 0.1994, 0.2010]
 
             if self.random_sized_crop:
                 raise ValueError('The random size crop option is not supported for the CIFAR dataset')
