@@ -33,6 +33,7 @@ class ProjectionHead(nn.Module):
         hidden_features,
         out_features,
         head_type="nonlinear",
+        use_bn=True,
     ):
         super(ProjectionHead, self).__init__()
 
@@ -49,14 +50,14 @@ class ProjectionHead(nn.Module):
                     in_features=in_features,
                     out_features=hidden_features,
                     use_bias=True,
-                    use_bn=True,
+                    use_bn=use_bn,
                 ),
                 nn.ReLU(),
                 LinearLayer(
                     in_features=hidden_features,
                     out_features=out_features,
                     use_bias=False,
-                    use_bn=True,
+                    use_bn=use_bn,
                 ),
             )
 
