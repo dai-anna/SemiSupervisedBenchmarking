@@ -1,3 +1,8 @@
+"""
+It is the neural network model base encoder f(·) that extracts representation vectors 
+from augmented data examples. We choose to use the ResNet20 architecture.
+"""
+
 import torch.nn as nn
 import torch.nn.functional as F
 
