@@ -1,0 +1,7 @@
+\begin{abstract}
+
+A major bottleneck in various use cases of deep convolutional neural networks (ConvNets) in recent days is the lack of fully labeled data. The paper aims to compare performance and learned representations of two self-supervised frameworks: SimCLR and RotNet on partially labeled data. SimCLR is a framework for contrastive Learning of image representations proposed by  Chen, et al. \cite{SimCLR}. RotNet is an unsupervised semantic feature learning framework proposed by Gidaris, et al. \cite{RotNet} to learn representations from rotated data.
+We implement both frameworks with a ResNet-20 ConvNet Encoder to evaluate performance on the CIFAR-10 dataset. We find that SimCLR outperforms RotNet using linear evaluations, but RotNet in its semi-supervised state outperforms SimCLR linear evaluations. We further observe in the feature maps of the encoders from both frameworks that the RotNet encoder learns the edges of images in the first two blocks of convolutional layers, whereas the SimCLR encoders learns more comprehensive information about the images.
+
+\end{abstract}
+
